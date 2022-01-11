@@ -1,0 +1,41 @@
+<a routerLink="/Register" class="btn btn-link">Register</a>
+
+<div class="error">
+  <h2>{{errMessage}}</h2>
+</div>
+<form class="form" #loginForm=ngForm (submit)="login($event)">
+  <fieldset>
+    <legend>Login</legend>
+    <mat-form-field>
+      <mat-placeholder>
+        <mat-icon>
+          account_box
+        </mat-icon>
+        User Name
+      </mat-placeholder>
+      <input matInput [(ngModel)]="user.userName" required name="uname" #uname=ngModel/>
+      <div [hidden]="uname.valid || uname.pristine">
+        Must Enter User Name
+      </div>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-placeholder>
+        <mat-icon>
+          lock_open
+        </mat-icon>
+        Password
+      </mat-placeholder>
+      <input type="password" matInput [(ngModel)]="user.password" required name="password" #password=ngModel/>
+      <div [hidden]="password.valid || password.pristine">
+        Must Enter Password
+      </div>
+    </mat-form-field>
+    <button mat-fab color="primary" [disabled]="!loginForm.form.valid">
+      <mat-icon>
+        lock_open
+      </mat-icon>
+    </button>
+
+  </fieldset>
+</form>
+

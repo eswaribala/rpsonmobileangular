@@ -1,0 +1,42 @@
+
+<section class="upload">
+<div class="container row">
+  <div class="col-md-12">
+    <h4>Upload Image</h4>
+  </div>
+</div>
+<div class="container row">
+  <div class="col-md-6">
+
+
+      <input type="file" (change)="onFileChanged($event)">
+
+
+  </div>
+  <div class="col-md-6">
+    <button  mat-fab  (click)="onUpload()" >upload</button>
+  </div>
+</div>
+<hr />
+<div class="container row">
+  <div class="col-md-12">
+    <div *ngIf=message>{{message}}</div>
+  </div>
+</div>
+<div class="container row">
+  <div class="col-md-6">
+    <input type="text" class="form-control" id="name" placeholder="image name" [(ngModel)]="imageName"
+           name="name" />
+  </div>
+  <div class="col-md-6">
+    <button  mat-fab color="primary" (click)="getImage()">Get Pic</button>
+  </div>
+</div>
+<div class="container row">
+  <div class="col-md-12">
+    <div *ngIf=retrievedImage>
+      <img [src]="retrievedImage">
+    </div>
+  </div>
+</div>
+</section>

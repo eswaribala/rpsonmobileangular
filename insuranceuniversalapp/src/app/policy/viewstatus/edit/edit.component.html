@@ -1,0 +1,22 @@
+<h1 mat-dialog-title> Modify Country Details </h1>
+<div mat-dialog-content>
+
+  <p>{{data.name}}</p>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.capital" placeholder="Capital">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.population" placeholder="Population">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.nativeName" placeholder="Native Name">
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data"  cdkFocusInitial>Ok</button>
+</div>
+
+

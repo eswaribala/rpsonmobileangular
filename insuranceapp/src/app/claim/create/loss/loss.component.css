@@ -1,0 +1,44 @@
+.lossForm
+{
+  width:120%;
+  margin-top: 5%;
+ background-color: lightblue;
+  border: 2px solid blue;
+
+}
+.lossForm fieldset
+{
+
+padding:10%
+
+
+}
+.lossForm fieldset legend
+{
+  text-align: center;
+}
+
+
+.validation
+{
+  color: orangered;
+}
+.mat-form-field
+{
+
+  margin-right: 18%;
+
+}
+.lossForm button[type=submit]
+{
+  width:20%;
+  margin-bottom: 2%;
+  margin-left: 10%;
+  margin-right: 25%;
+}
+.lossForm button[type=reset]
+{
+  width:20%;
+  margin-bottom: 2%;
+
+}

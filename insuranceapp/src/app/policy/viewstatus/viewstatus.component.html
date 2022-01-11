@@ -1,0 +1,76 @@
+<br/>
+<mat-table [dataSource]="tableSource" matSort id="contentToConvert">
+
+
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Name </mat-header-cell>
+    <mat-cell *matCellDef="let elem"> {{elem.name}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="capital">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Capital </mat-header-cell>
+    <mat-cell *matCellDef="let elem"> {{elem.capital}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="population">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Population </mat-header-cell>
+    <mat-cell *matCellDef="let elem"> {{elem.population}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="nativeName">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Native Name </mat-header-cell>
+    <mat-cell *matCellDef="let elem"> {{elem.nativeName}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="edit">
+    <mat-header-cell *matHeaderCellDef> Edit Data </mat-header-cell>
+    <td mat-cell *matCellDef="let elem">
+      <button mat-fab color="warn" (click)="openDialog(elem)">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="delete">
+    <<mat-header-cell *matHeaderCellDef> Delete Data </mat-header-cell>
+    <td mat-cell *matCellDef="let elem" >
+      <button mat-fab color="warn" (click)="deleteRowData(elem)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table>
+<mat-paginator [pageSizeOptions]="[3,5,7, 10, 20]" showFirstLastButtons></mat-paginator>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div *ngIf="countryData?.length>0">
+  <h4>Testing</h4>
+<table>
+  <tr *ngFor="let obj of countryData">
+    <td>{{obj.name}}</td>
+    <td>{{obj.population}}</td>
+    <td>{{obj.nativeName}}</td>
+    <td>{{obj.area}}</td>
+    <td>{{obj.capital}}</td>
+  </tr>
+</table>
+</div>-->
+
+
+

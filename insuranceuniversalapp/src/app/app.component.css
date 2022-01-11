@@ -1,0 +1,32 @@
+.header
+{
+  width:80%;
+  margin-left: 8%;
+
+}
+.figure
+{
+  width:25%;
+  float:left;
+
+}
+
+.article
+{
+  width:50%;
+  margin-left: 35%;
+  padding:3%
+
+}
+.article h1
+{
+  font-size: xx-large;
+  color: blue;
+}
+
+.figure img
+{
+  width:150px;
+  height:150px;
+}
+
